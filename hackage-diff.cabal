@@ -5,8 +5,8 @@ cabal-version: >= 1.10
 
 executable hackage-diff
   main-is: Main.hs
-  ghc-options: -Wall -Wunused-imports
+  ghc-options: -Wall -Wunused-packages
   default-extensions: ImportQualifiedPost
   build-depends:
-     base, text, Cabal, aeson, http-conduit, process, containers
+     base, http-conduit, process, containers
    , directory, filepath, bytestring
