@@ -1,0 +1,12 @@
+name: hackage-diff
+version: 0.1.0.0
+build-type: Simple
+cabal-version: >= 1.10
+
+executable hackage-diff
+  main-is: Main.hs
+  ghc-options: -Wall -Wunused-imports
+  default-extensions: ImportQualifiedPost
+  build-depends:
+     base, text, Cabal, aeson, http-conduit, process, containers
+   , directory, filepath, bytestring
