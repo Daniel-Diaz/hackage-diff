@@ -36,7 +36,8 @@ main = do
           putStrLn "Decompressing tarball..."
           callCommand $ "tar -xf " ++ tarFileName
           putStrLn "Diff:"
-          callCommand $ "diff --color -x '" ++ tarName ++ "/' -r '" ++ tarName ++ "/' . || true"
+          callCommand $ "diff --color -x '" ++ tarName ++ "' -x '" ++ tarFileName
+                     ++ "' -r '" ++ tarName ++ "/' . || true"
           -- Cleanup
           removeDirectoryRecursive tarName
           removeFile tarFileName
